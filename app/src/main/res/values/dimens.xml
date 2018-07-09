@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_width">350dp</dimen>
+    <dimen name="card_height">250dp</dimen>
+    <dimen name="card_margin">40dp</dimen>
+    <dimen name="question_margin">10dp</dimen>
+    <dimen name="radiobutton_padding">14dp</dimen>
+    <dimen name="margin">20dp</dimen>
+    <dimen name="cardcornerradius">4dp</dimen>
+    <dimen name="below_margin">10dp</dimen>
+</resources>

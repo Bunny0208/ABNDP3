@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">FIFA QUIZ</string>
+    <string name="q1">Q1. Which was the first team to win the \t \t \tworld cup twice ?</string>
+    <string name="q2">Q2. Which is the only country to enter more than one World Cup final and not lose any ?</string>
+    <string name="q3">Q3. Who was the first player to win the world cup as both player and manager ?</string>
+    <string name="q4">Q4. Which player has scored the most number of goals in World Cup ?</string>
+    <string name="q5">Q5. Which countries have won the World Cup more than once ?</string>
+    <string name="et">Enter the name of the country</string>
+    <string name="q1o1">Spain</string>
+    <string name="q1o2">Germany</string>
+    <string name="q1o3">Brazil</string>
+    <string name="q1o4">Italy</string>
+    <string name="q3o1">Franz Beckenbauer</string>
+    <string name="q3o2">Pele</string>
+    <string name="q3o3">Mario Zagallo</string>
+    <string name="q3o4">Diego Maradona</string>
+    <string name="q4o1">Pele</string>
+    <string name="q4o2">Miroslav Klose</string>
+    <string name="q4o3">Ronaldo</string>
+    <string name="q4o4">Zinedine Zidane</string>
+    <string name="q5o1">Argentina</string>
+    <string name="q5o2">Brazil</string>
+    <string name="q5o3">England</string>
+    <string name="q5o4">Spain</string>
+    <string name="bu1"> \tSubmit and Check\t\t</string>
+</resources>
