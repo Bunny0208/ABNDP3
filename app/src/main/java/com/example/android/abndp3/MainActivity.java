@@ -27,37 +27,51 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ButtonClick(View view) {
-        String ans1 = ((RadioButton) findViewById(ques1.getCheckedRadioButtonId())).getText().toString();
-        if(ans1.equalsIgnoreCase("Italy")) {
-            score = score + 1;
+        score = 0;
+        RadioGroup checkAnswer1 = findViewById(R.id.ques1_radio);
+        if(checkAnswer1.getCheckedRadioButtonId() != -1) {
+            String ans1 = ((RadioButton) findViewById(ques1.getCheckedRadioButtonId())).getText().toString();
+            if (ans1.equalsIgnoreCase("Italy")) {
+                score++;
+            }
         }
 
         if(((EditText)findViewById(R.id.card2_et)).getText().toString().equalsIgnoreCase("Uruguay"))
         {
-            score = score + 1;
-        }
-       String ans3 = ((RadioButton) findViewById(ques3.getCheckedRadioButtonId())).getText().toString();
-        if(ans3.equalsIgnoreCase("Mario Zagallo"))
-        {
-            score = score + 1;
-        }
-        String ans4 = ((RadioButton) findViewById(ques4.getCheckedRadioButtonId())).getText().toString();
-        if(ans4.equalsIgnoreCase("Miroslav Klose"))
-        {
-            score = score +  1;
+            score++;
         }
 
-        CheckBox q5ch1 = (CheckBox) findViewById(R.id.card5_ch1);
-        boolean chk1 = q5ch1.isChecked();
-
-        CheckBox q5ch2 = (CheckBox) findViewById(R.id.card5_ch2);
-        boolean chk2 = q5ch2.isChecked();
-
-        boolean right_ans = chk1 && chk2;
-        if(right_ans)
-        {
-            score = score+ 1;
+        RadioGroup checkAnswer3 = findViewById(R.id.ques3_radio);
+        if(checkAnswer3.getCheckedRadioButtonId() != -1) {
+            String ans3 = ((RadioButton) findViewById(ques3.getCheckedRadioButtonId())).getText().toString();
+            if (ans3.equalsIgnoreCase("Mario Zagallo")) {
+                score++;
+            }
         }
-        Toast.makeText(this, "You Scored " + score + " out of 5", Toast.LENGTH_SHORT).show();
+
+        RadioGroup checkAnswer4 = findViewById(R.id.ques4_radio);
+        if(checkAnswer4.getCheckedRadioButtonId() != -1) {
+            String ans4 = ((RadioButton) findViewById(ques4.getCheckedRadioButtonId())).getText().toString();
+            if (ans4.equalsIgnoreCase("Miroslav Klose")) {
+                score++;
+            }
+        }
+        CheckBox q5ch1 = findViewById(R.id.card5_ch1);
+        CheckBox q5ch2 = findViewById(R.id.card5_ch2);
+        CheckBox q5ch3 = findViewById(R.id.card5_ch3);
+        CheckBox q5ch4 = findViewById(R.id.card5_ch4);
+
+        if(q5ch1.isChecked() && q5ch2.isChecked() && !q5ch3.isChecked() && !q5ch4.isChecked() )
+        {
+            score++;
+        }
+        if(score==5)
+        {
+            Toast.makeText(this, "Congratulations!!! You Scored " + score + " out of 5", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Toast.makeText(this, "You Scored " + score + " out of 5", Toast.LENGTH_SHORT).show();
+        }
     }
 }
